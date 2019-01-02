@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#backButtonClicked" prefHeight="600.0" prefWidth="1424.0" style="-fx-background-image: url('https://www.telegraph.co.uk/content/dam/news/2017/10/18/TELEMMGLPICT000134585453_trans_NvBQzQNjv4BqpVlberWd9EgFPZtcLiMQfyf2A9a6I9YchsjMeADBa08.jpeg?imwidth=1400');" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Student">
+   <children>
+      <AnchorPane layoutX="424.0" layoutY="199.0" prefHeight="271.0" prefWidth="522.0" style="-fx-background-color: #E0FFFF;">
+         <children>
+            <Label layoutX="34.0" layoutY="92.0" text="Search:">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="articlesSelection" layoutX="119.0" layoutY="160.0" mnemonicParsing="false" text="articles" />
+            <RadioButton fx:id="booksSelection" layoutX="278.0" layoutY="160.0" mnemonicParsing="false" text="books" />
+            <Separator layoutY="130.0" opacity="0.03" prefHeight="17.0" prefWidth="522.0" style="-fx-background-color: black;" />
+            <Button fx:id="serachClicked" layoutX="251.0" layoutY="213.0" mnemonicParsing="false" onAction="#buttonSearchClicked" style="-fx-background-color: #00BFFF;;" text="Search">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="textArea" layoutX="37.0" layoutY="213.0" />
+            <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="522.0" style="-fx-background-color: #b2b2b2;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <menus>
+                  <Menu mnemonicParsing="false" text="Books       ">
+                     <items>
+                        <MenuItem fx:id="borrowedBooks" mnemonicParsing="false" onAction="#borrowedBookSection" text="Borrowed Books" />
+                        <MenuItem fx:id="borrowedArticles" mnemonicParsing="false" onAction="#borrowedSection" text="Borrowed Articles" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="41.0" fitWidth="38.0" layoutX="1130.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logout-1-110657.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="logoutButton" layoutX="1195.0" layoutY="37.0" mnemonicParsing="false" onAction="#logoutButtonClicked" prefHeight="38.0" prefWidth="65.0" style="-fx-background-color: #00BFFF;" text="Logout">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="102.0" layoutY="56.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="75.0" style="-fx-background-color: #00BFFF;" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="56.0" fitWidth="54.0" layoutX="48.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back-button.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,6 @@
+.table-row-cell:even{
+    -fx-selection-bar : blue;
+}
+.table-row-cell{
+    -fx-selection-bar :blue;
+}

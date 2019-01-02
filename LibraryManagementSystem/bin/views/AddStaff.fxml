@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1424.0" style="-fx-background-image: url('https://www.telegraph.co.uk/content/dam/news/2017/10/18/TELEMMGLPICT000134585453_trans_NvBQzQNjv4BqpVlberWd9EgFPZtcLiMQfyf2A9a6I9YchsjMeADBa08.jpeg?imwidth=1400');" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddStaff">
+   <children>
+      <AnchorPane layoutX="208.0" layoutY="65.0" prefHeight="510.0" prefWidth="754.0" style="-fx-background-color: #FFE4B5;">
+         <children>
+            <MenuBar prefHeight="25.0" prefWidth="773.0" style="-fx-background-color: #b2b2b2;">
+              <menus>
+                <Menu mnemonicParsing="false" text="Books            ">
+                  <items>
+                    <MenuItem fx:id="addBookClicked" mnemonicParsing="false" onAction="#additionOfBook" text="Add Books" />
+                        <MenuItem fx:id="updateBookClicked" mnemonicParsing="false" onAction="#updationOfBook" text="Update Books" />
+                        <MenuItem fx:id="deleteBookClicked" mnemonicParsing="false" onAction="#deletionOfBook" text="Delete Books" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Staff Members                       ">
+                  <items>
+                        <MenuItem fx:id="updateStaffClicked" mnemonicParsing="false" onAction="#updationOfStaff" text="Update Staff Member" />
+                        <MenuItem fx:id="deleteStaffClicked" mnemonicParsing="false" text="Delete Staff Member" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Settings           ">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Update Personal Info" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <AnchorPane layoutX="150.0" layoutY="91.0" prefHeight="346.0" prefWidth="507.0" style="-fx-background-color: #8FBC8F;">
+               <children>
+                  <TextField fx:id="addStaffId" layoutX="261.0" layoutY="28.0" />
+                  <TextField fx:id="addStaffName" layoutX="261.0" layoutY="83.0" />
+                  <TextField fx:id="addStaffEmail" layoutX="261.0" layoutY="128.0" />
+                  <TextField fx:id="addStaffPassword" layoutX="261.0" layoutY="178.0" />
+                  <TextField fx:id="addStaffCell" layoutX="261.0" layoutY="235.0" />
+                  <Text layoutX="78.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Staff ID             :" wrappingWidth="106.72266006469727">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="78.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Staff Name       :" wrappingWidth="106.72266006469727">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="64.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username/Email  :" wrappingWidth="134.9443359375">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="78.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password          :" wrappingWidth="106.72266006469727">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="64.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number    :" wrappingWidth="134.94433093070984">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="79.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address           :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="addStaffAddress" layoutX="261.0" layoutY="285.0" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="addButtonClicked" layoutX="296.0" layoutY="466.0" mnemonicParsing="false" onAction="#initData" style="-fx-background-color: #00BFFF;" text="Add Staff">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="clearButton" layoutX="522.0" layoutY="466.0" mnemonicParsing="false" onAction="#clearButtonClicked" style="-fx-background-color: #00BFFF;" text="Clear Fields">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="41.0" fitWidth="38.0" layoutX="1130.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logout-1-110657.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="logoutButton" layoutX="1195.0" layoutY="37.0" mnemonicParsing="false" onAction="#logoutButtonClicked" prefHeight="38.0" prefWidth="65.0" style="-fx-background-color: #00BFFF;" text="Logout">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="509.0" layoutY="29.0" prefHeight="27.0" prefWidth="206.0" style="-fx-background-color: #8FBC8F;" text="Add Staff Details">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" layoutX="107.0" layoutY="47.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="38.0" prefWidth="75.0" style="-fx-background-color: #00BFFF;" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="56.0" fitWidth="54.0" layoutX="53.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back-button.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
